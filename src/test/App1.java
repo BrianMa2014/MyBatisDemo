@@ -10,10 +10,10 @@ import java.io.InputStream;
 
 /**
  * Created by MaMingJiang on 2016/6/12.
- * ʹ�ú�������������SQL��䷵��ֵ�Ľӿ�(���磺IUser.class)��
- * �������ھͿ��������Ǹ����򵥣�����ȫ�Ĵ��룬û�����׷������ַ������ֺ�ת���Ĵ���
+ * 使用合理描述参数和SQL语句返回值的接口(比如：IUser.class)，
+ * 这样现在就可以至此那个更简单，更安全的代码，没有容易发生的字符串文字和转换的错误
  *
- * ��������ʡ��userMapper.xml
+ * 这样可以省略userMapper.xml
  */
 public class App1 {
 

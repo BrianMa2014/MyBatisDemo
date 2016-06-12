@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Select;
 /**
  * Created by MaMingJiang on 2016/6/12.
  * 替代mapper.xml的一种方式
+ * Mybatis接口注解
  */
 public interface IUser {
 
