@@ -6,7 +6,9 @@ package main.com.mmj.entity;
 public class User {
     private int id;
     private String name;
-    private int age;
+    private String dept;
+    private String phone;
+    private String website;
 
     public int getId() {
         return id;
@@ -24,17 +26,37 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getDept() {
+        return dept;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDept(String dept) {
+        this.dept = dept;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
     @Override
     public String toString(){
-        System.out.println("id:"+this.id+",name:"+this.name+"age:"+this.age);
+        System.out.println("id:"+this.id+"," +
+                "name:"+this.name+"," +
+                "dept:"+dept+"," +
+                "phone:"+phone+"," +
+                "website:"+website);
         return "";
     }
 }
