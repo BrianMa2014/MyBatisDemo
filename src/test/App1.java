@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Created by MaMingJiang on 2016/6/12.
@@ -29,7 +30,7 @@ public class App1 {
     }
 
     public static void main(String[] args) {
-        sqlSessionFactory.getConfiguration().addMapper(IUser.class);
+//        sqlSessionFactory.getConfiguration().addMapper(IUser.class);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         IUser iuser = sqlSession.getMapper(IUser.class);
         User user = iuser.getUserById(1);
