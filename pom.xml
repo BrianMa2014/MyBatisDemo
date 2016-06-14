@@ -26,6 +26,12 @@
         <artifactId>mybatis</artifactId>
         <version>3.2.8</version>
     </dependency>
+      <!-- http://mvnrepository.com/artifact/joda-time/joda-time -->
+    <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>2.9.1</version>
+      </dependency>
 
   </dependencies>
   <build>

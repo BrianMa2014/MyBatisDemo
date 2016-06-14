@@ -4,8 +4,20 @@
     <!--<select id="getUserById" parameterType="int" resultType="User">-->
         <!--select * from user where id = #{id}-->
     <!--</select>-->
-    <select id="selectUserById" parameterType="int" resultType="User">
-        select * from user where user.id = #{id}
+    <resultMap id="userResultMap" type="User">
+        <result property="id" column="id" />
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="dept" column="dept" />
+        <result property="website" column="website"/>
+        <collection property="posts" ofType="main.com.mmj.entity.Post" column="userid">
+            <id property="id" column="post_id" javaType="int" jdbcType="INTEGER"/>
+            <result property="title" column="title" javaType="string" jdbcType="VARCHAR"/>
+            <result property="content" column="content" javaType="string" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <select id="selectUserById" parameterType="int" resultMap="userResultMap">
+        select u.*,p.* from user u, post p where u.id=p.userid and u.id = #{id}
     </select>
     <!--
     useGeneratedKeys设置为"true"表明要MyBatis获取由数据库自动生成的主键；

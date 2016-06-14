@@ -1,5 +1,7 @@
 package main.com.mmj.entity;
 
+import java.util.List;
+
 /**
  * Created by MaMingJiang on 2016/6/12.
  */
@@ -9,6 +11,7 @@ public class User {
     private String dept;
     private String phone;
     private String website;
+    private List<Post> posts;
 
     public int getId() {
         return id;
@@ -48,6 +51,14 @@ public class User {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     @Override

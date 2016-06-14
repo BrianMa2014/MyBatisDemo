@@ -55,7 +55,7 @@ public class App2 {
         sqlSession.commit();
 
         //4 . update User
-        User updateUser = iuser.selectUserById(7);
+        User updateUser = iuser.selectUserById(8);
         updateUser.setPhone("44444");
         updateUser.setName("modifyName454");
         updateUser.setWebsite("wwww.yint.com454");

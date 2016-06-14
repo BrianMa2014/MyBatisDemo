@@ -4,6 +4,7 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="User" type="main.com.mmj.entity.User" />
+        <typeAlias alias="Post" type="main.com.mmj.entity.Post"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
